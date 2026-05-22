@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura Intimates — Elegância que Abraça Você</title>
+
+  <!-- Google Fonts: Cormorant Garamond (display) + Jost (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Estilos do site -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================================================
+     HEADER
+================================================= -->
+<header id="site-header">
+  <div class="container">
+    <nav class="navbar">
+
+      <!-- Logo -->
+      <a href="#home" class="logo">
+        <span class="logo-main">Aura</span>
+        <span class="logo-sub">Intimates</span>
+      </a>
+
+      <!-- Links de navegação (desktop) -->
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#colecoes">Coleções</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+      </ul>
+
+
+
+      <!-- Botão hamburger (mobile) -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+    </nav>
+  </div>
+
+  <!-- Menu de navegação mobile -->
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#home"     onclick="closeMobileMenu()">Home</a>
+    <a href="#colecoes" onclick="closeMobileMenu()">Coleções</a>
+      <a href="#sobre"    onclick="closeMobileMenu()">Sobre Nós</a>
+  </div>
+</header>
+
+
+<!-- ================================================
+     HERO
+================================================= -->
+<section id="home">
+
+  <!-- Lado esquerdo: texto e CTA -->
+  <div class="hero-content">
+    <p class="hero-eyebrow">Nova Coleção — Outono 2025</p>
+    <h1 class="hero-title">
+      Sinta-se<br/>
+      <em>inteira</em><br/>
+      em você.
+    </h1>
+    <p class="hero-desc">
+      Peças pensadas para celebrar cada corpo, cada curva, cada versão de você.
+      Tecidos que respiram, cortes que abraçam, elegância que começa de dentro.
+    </p>
+    <div class="hero-cta">
+      <a href="#colecoes" class="btn btn-primary">Ver Coleção</a>
+      <a href="#sobre"    class="btn btn-outline">Nossa Missão</a>
+    </div>
+  </div>
+
+  <!-- Lado direito: imagem com badge -->
+  <div class="hero-image">
+    <img
+      src="https://images.unsplash.com/photo-1596993100471-c3905dafa78e?w=900&q=80&auto=format&fit=crop"
+      alt="Mulher confiante usando lingerie Aura"
+      loading="eager"
+    />
+    <div class="hero-image-badge">
+      <span>+400</span>
+      <span>Modelos</span>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ================================================
+     STRIP / MARQUEE
+================================================= -->
+<div class="strip" aria-hidden="true">
+  <div class="strip-inner">
+    <span>Elegância que abraça</span>
+    <span class="dot">✦</span>
+    <span>Corpos reais, peças reais</span>
+    <span class="dot">✦</span>
+    <span>Tecidos premium nacionais</span>
+    <span class="dot">✦</span>
+    <span>Frete grátis acima de R$180</span>
+    <span class="dot">✦</span>
+    <!-- Duplicado para o loop contínuo do marquee -->
+    <span>Elegância que abraça</span>
+    <span class="dot">✦</span>
+    <span>Corpos reais, peças reais</span>
+    <span class="dot">✦</span>
+    <span>Tecidos premium nacionais</span>
+    <span class="dot">✦</span>
+    <span>Frete grátis acima de R$180</span>
+    <span class="dot">✦</span>
+  </div>
+</div>
+
+
+<!-- ================================================
+     CATEGORIAS
+================================================= -->
+<section id="colecoes">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <p class="section-subtitle">Nossas Linhas</p>
+      <h2 class="section-title">Coleções que<br/>te definem</h2>
+    </div>
+
+    <div class="categories-grid">
+
+      <div class="category-card reveal">
+        <img
+          src="Imgs/renda-e-luxo.jpg"
+          alt="Linha Renda & Luxo"
+          loading="lazy"
+        />
+        <div class="category-overlay">
+          <p class="category-label">Linha</p>
+          <h3 class="category-name">Renda & Luxo</h3>
+        </div>
+      </div>
+
+      <div class="category-card reveal">
+        <img
+          src="Imgs/conforto.jpg"
+          alt="Conforto Dia a Dia"
+          loading="lazy"
+        />
+        <div class="category-overlay">
+          <p class="category-label">Linha</p>
+          <h3 class="category-name">Conforto<br/>Dia a Dia</h3>
+        </div>
+      </div>
+
+      <div class="category-card reveal">
+        <img
+          src="Imgs/pijama-e-loungewear.jpg"
+          alt="Pijamas & Loungewear"
+          loading="lazy"
+        />
+        <div class="category-overlay">
+          <p class="category-label">Linha</p>
+          <h3 class="category-name">Pijamas<br/>& Loungewear</h3>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     PRODUTOS EM DESTAQUE
+     (cards injetados dinamicamente por main.js)
+================================================= -->
+<section id="produtos">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <p class="section-subtitle">Vitrine</p>
+      <h2 class="section-title">Peças em Destaque</h2>
+    </div>
+
+    <div class="products-grid" id="products-grid">
+      <!-- Produtos renderizados via JavaScript -->
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================================================
+     SOBRE / MANIFESTO
+================================================= -->
+<section id="sobre">
+  <div class="container">
+    <div class="sobre-grid">
+
+      <!-- Bloco de imagens -->
+      <div class="sobre-img-wrap reveal">
+        <img
+          class="sobre-img-main"
+          src="Imgs/sobre.jpg"
+          alt=""
+          loading="lazy"
+        />
+        <img
+          class="sobre-img-float"
+          src="Imgs/sobre2.jpg"
+          loading="lazy"
+        />
+      </div>
+
+      <!-- Texto manifesto -->
+      <div class="sobre-content reveal">
+        <p class="section-subtitle">Nossa Essência</p>
+        <h2 class="section-title" style="margin-bottom:28px">
+          Um manifesto<br/>de autoestima
+        </h2>
+
+        <p class="sobre-quote">
+          "Elegância não é um tamanho.<br/>
+          É como você se sente quando veste algo feito para você."
+        </p>
+
+        <p class="sobre-text">
+          A Aura Intimates nasceu da crença de que toda mulher merece se sentir
+          extraordinária em sua própria pele — não importa o tamanho, forma ou fase da vida.
+        </p>
+        <p class="sobre-text">
+          Cada peça é desenhada com tecidos que respiram, cortes que abraçam e
+          acabamentos que duram. Trabalhamos com confecção nacional, apostando em
+          costureiras locais e materiais certificados livres de substâncias nocivas.
+        </p>
+        <p class="sobre-text">
+          Nossa coleção vai do P ao XG porque acreditamos que a moda íntima deve
+          celebrar todos os corpos — não apenas os que cabem nas prateleiras tradicionais.
+        </p>
+
+        <div class="sobre-values">
+          <div class="value-item">
+            <div class="value-icon">🌿</div>
+            <span class="value-label">Sustentável</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">✊</div>
+            <span class="value-label">Inclusivo</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🧵</div>
+            <span class="value-label">Nacional</span>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">💛</div>
+            <span class="value-label">Conforto</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     CTA CATÁLOGO (WHATSAPP)
+================================================= -->
+<section id="catalogo" class="catalogo-section">
+  <div class="container">
+    <div class="catalogo-box reveal">
+      <div class="catalogo-left">
+        <p class="section-subtitle">Catálogo</p>
+        <h2 class="section-title">Receba o catálogo<br/>no WhatsApp</h2>
+        <p class="catalogo-desc">
+          Envie “catálogo” e receba as opções e lançamentos para escolher seu conjunto com conforto e estilo.
+        </p>
+      </div>
+      <div class="catalogo-right">
+        <button class="btn btn-rose" type="button" onclick="sendCatalogWhatsApp()">
+          Solicitar catálogo
+        </button>
+        <p class="catalogo-note">Resposta rápida ✦</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================
+     FOOTER
+================================================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Coluna: marca -->
+      <div>
+        <div class="footer-logo-main">Aura</div>
+        <div class="footer-logo-sub">Intimates</div>
+        <p class="footer-about">
+          Moda íntima pensada para celebrar cada corpo.
+          Conforto, elegância e inclusão em cada costura.
+        </p>
+      </div>
+
+      <!-- Coluna: links institucionais -->
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <ul>
+          <li><a href="#sobre">Quem Somos</a></li>
+          <li><a href="#">Trabalhe Conosco</a></li>
+          <li><a href="#">Sustentabilidade</a></li>
+          <li><a href="#">Blog Aura</a></li>
+          <li><a href="#">Política de Privacidade</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna: pagamentos e atendimento -->
+      <div class="footer-col">
+        <h4>Formas de Pagamento</h4>
+        <div class="payment-icons">
+          <span class="pay-badge">Visa</span>
+          <span class="pay-badge">Master</span>
+          <span class="pay-badge">Pix</span>
+          <span class="pay-badge">Boleto</span>
+          <span class="pay-badge">Elo</span>
+          <span class="pay-badge">Amex</span>
+        </div>
+        <h4 style="margin-top:28px">Atendimento</h4>
+        <ul>
+          <li><a href="#">Central de Ajuda</a></li>
+          <li><a href="#">Trocas e Devoluções</a></li>
+          <li><a href="#">Rastrear Pedido</a></li>
+        </ul>
+      </div>
+
+      <!-- Coluna: newsletter -->
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="font-size:.82rem;color:var(--warm-gray);margin-bottom:14px;line-height:1.7">
+          Assine e ganhe <strong style="color:var(--rose)">10% OFF</strong>
+          no primeiro pedido + acesso antecipado às coleções.
+        </p>
+        <div class="newsletter-form" id="newsletter-form">
+          <input
+            type="email"
+            id="newsletter-email"
+            placeholder="seu@email.com"
+            aria-label="E-mail para newsletter"
+          />
+          <button type="button" onclick="subscribeNewsletter()">OK</button>
+        </div>
+        <p class="newsletter-note">Sem spam. Cancele quando quiser.</p>
+        <p id="newsletter-success">✦ Obrigada! Seu cupom chegará em breve.</p>
+      </div>
+
+    </div><!-- /footer-grid -->
+
+    <div class="footer-bottom">
+      <span>© 2025 Aura Intimates. Todos os direitos reservados.</span>
+      <span>Feito com amor no Brasil 🇧🇷</span>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ================================================
+     MODAL DE PRODUTO
+================================================= -->
+<div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-label="Detalhes do produto">
+  <div class="modal" id="modal">
+
+      <!-- Botão fechar -->
+    <button class="modal-close" id="modal-close-btn" aria-label="Fechar modal">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M18 6 6 18M6 6l12 12"/>
+      </svg>
+    </button>
+
+    <!-- Foto do produto -->
+    <div class="modal-img">
+      <img id="modal-img" src="" alt="" />
+      <span class="modal-img-badge" id="modal-badge"></span>
+    </div>
+
+    <!-- Detalhes e seleções -->
+    <div class="modal-details">
+      <p class="modal-brand"  id="modal-brand"></p>
+      <h2 class="modal-name" id="modal-name"></h2>
+      <p class="modal-price" id="modal-price"></p>
+
+      <!-- Seleção de tamanho -->
+      <p class="modal-option-label">Tamanho <span id="size-selected-label"></span></p>
+      <div class="size-btns" id="size-btns"></div>
+
+      <!-- Seleção de cor -->
+      <p class="modal-option-label">Cor <span id="color-selected-label"></span></p>
+      <div class="color-btns" id="color-btns"></div>
+
+      <!-- Composição do tecido -->
+      <div class="modal-material">
+        <h5>Composição &amp; Cuidado</h5>
+        <p id="modal-material"></p>
+      </div>
+
+      <!-- Botão adicionar ao carrinho -->
+      <div class="modal-add-btn">
+        <button class="btn btn-primary" id="modal-add-cart">Pedir no WhatsApp</button>
+      </div>
+
+      <!-- Link extra abaixo de Sobre (redireciona com mensagem pronta no WhatsApp) -->
+        <button class="btn btn-rose" type="button" id="about-whatsapp-btn" onclick="sendAboutWhatsApp()">
+          Falar no WhatsApp
+        </button>
+
+
+
+    </div>
+
+  </div><!-- /modal -->
+</div><!-- /modal-overlay -->
+
+
+<!-- ================================================
+     TOAST (notificação flutuante)
+================================================= -->
+<div id="toast" role="alert" aria-live="polite"></div>
+
+
+<!-- ================================================
+     JAVASCRIPT
+     Carregado no final do body para garantir que
+     todo o DOM já foi parseado quando o script rodar.
+================================================= -->
+<script src="main.js"></script>
+<script src="./whatsapp-catalog.js"></script>
+
+<script>
+  function sendAboutWhatsApp() {
+    const url = 'https://wa.me/5585991067509';
+    const message = [
+      'Olá! Vim pelo site da Aura Intimates e gostaria de saber mais.',
+      'Quero tirar uma dúvida sobre peças e tamanhos (P ao XG).',
+      'Vocês podem me ajudar com sugestões?'
+    ].join('\n');
+
+    window.open(url + '?text=' + encodeURIComponent(message), '_blank');
+  }
+</script>
+
+
+</body>
+</html>
