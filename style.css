@@ -792,6 +792,7 @@ header.scrolled { box-shadow: var(--shadow-soft); }
   display: flex;
   flex-direction: column;
   gap: 6px;
+  align-items: center;
 }
 .value-icon {
   width: 44px; height: 44px;
@@ -801,6 +802,11 @@ header.scrolled { box-shadow: var(--shadow-soft); }
   font-size: 1.2rem;
   margin-bottom: 4px;
 }
+
+.value-icon img {
+  width: 28px
+}
+
 .value-label {
   font-size: .72rem;
   letter-spacing: .16em;
