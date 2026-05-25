@@ -124,21 +124,22 @@ function renderProducts() {
       <div class="product-img-wrap" aria-hidden="true">
         <img src="${p.image}" alt="${p.name}" loading="lazy" />
         ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
-        <button class="product-wishlist" data-wish="${p.id}" aria-label="Favoritar ${p.name}">♡</button>
       </div>
+
 
       <div class="product-info">
 
         <h3 class="product-name">${p.name}</h3>
         <p class="product-cat">${p.category}</p>
         <p class="product-price">
-          ${p.oldPrice ? `<span class="old-price">${formatPrice(p.oldPrice)}</span>` : ''}
+        ${p.oldPrice ? `<span class="old-price">${formatPrice(p.oldPrice)}</span>` : ''}
           ${formatPrice(p.price)}
         </p>
         <button class="btn btn-rose open-modal-btn" data-id="${p.id}">Ver Detalhes</button>
       </div>
     </article>
   `).join('');
+
 
   // Delegação de eventos: um único listener no grid para todos os cards
   grid.addEventListener('click', e => {
